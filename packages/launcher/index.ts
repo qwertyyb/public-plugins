@@ -105,8 +105,9 @@ class LauncherPlugin implements PublicPlugin {
     setResult: (list: CommonListItem[]) => void
   ) {
     if (!keyword) return setResult([])
+    keyword = keyword.toLocaleLowerCase();
     setResult(this.apps.filter(item => {
-      return item.code?.includes(keyword)
+      return item.code?.toLocaleLowerCase().includes(keyword)
         || pinyinMatch(item.title, keyword)
     }))
   }

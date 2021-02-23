@@ -3,62 +3,62 @@
 
 
 "@types/mathjs@^6.0.11":
-  version "6.0.11"
-  resolved "https://registry.npm.taobao.org/@types/mathjs/download/@types/mathjs-6.0.11.tgz#bf24c1ed875252274008d2c373bad07e0348adfb"
-  integrity sha1-vyTB7YdSUidACNLDc7rQfgNIrfs=
+  "integrity" "sha1-vyTB7YdSUidACNLDc7rQfgNIrfs= sha512-q9B8ZreO41L38iTY76bCZEtAqzeRs4mNIOZpZ1sLSlcYgvgfFrnf8y8qfmas0tVWrsODjmQbQJFD6RJJJCqJbQ=="
+  "resolved" "https://registry.npm.taobao.org/@types/mathjs/download/@types/mathjs-6.0.11.tgz"
+  "version" "6.0.11"
   dependencies:
-    decimal.js "^10.0.0"
+    "decimal.js" "^10.0.0"
 
-complex.js@^2.0.11:
-  version "2.0.11"
-  resolved "https://registry.npm.taobao.org/complex.js/download/complex.js-2.0.11.tgz#09a873fbf15ffd8c18c9c2201ccef425c32b8bf1"
-  integrity sha1-Cahz+/Ff/YwYycIgHM70JcMri/E=
+"complex.js@^2.0.11":
+  "integrity" "sha1-Cahz+/Ff/YwYycIgHM70JcMri/E= sha512-6IArJLApNtdg1P1dFtn3dnyzoZBEF0MwMnrfF1exSBRpZYoy4yieMkpZhQDC0uwctw48vii0CFVyHfpgZ/DfGw=="
+  "resolved" "https://registry.npm.taobao.org/complex.js/download/complex.js-2.0.11.tgz"
+  "version" "2.0.11"
 
-decimal.js@^10.0.0, decimal.js@^10.2.1:
-  version "10.2.1"
-  resolved "https://registry.npm.taobao.org/decimal.js/download/decimal.js-10.2.1.tgz#238ae7b0f0c793d3e3cea410108b35a2c01426a3"
-  integrity sha1-I4rnsPDHk9PjzqQQEIs1osAUJqM=
+"decimal.js@^10.0.0", "decimal.js@^10.2.1":
+  "integrity" "sha1-I4rnsPDHk9PjzqQQEIs1osAUJqM= sha512-KaL7+6Fw6i5A2XSnsbhm/6B+NuEA7TZ4vqxnd5tXz9sbKtrN9Srj8ab4vKVdK8YAqZO9P1kg45Y6YLoduPf+kw=="
+  "resolved" "https://registry.npm.taobao.org/decimal.js/download/decimal.js-10.2.1.tgz"
+  "version" "10.2.1"
 
-escape-latex@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npm.taobao.org/escape-latex/download/escape-latex-1.2.0.tgz#07c03818cf7dac250cce517f4fda1b001ef2bca1"
-  integrity sha1-B8A4GM99rCUMzlF/T9obAB7yvKE=
+"escape-latex@^1.2.0":
+  "integrity" "sha1-B8A4GM99rCUMzlF/T9obAB7yvKE= sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw=="
+  "resolved" "https://registry.npm.taobao.org/escape-latex/download/escape-latex-1.2.0.tgz"
+  "version" "1.2.0"
 
-fraction.js@^4.0.13:
-  version "4.0.13"
-  resolved "https://registry.npm.taobao.org/fraction.js/download/fraction.js-4.0.13.tgz?cache=0&sync_timestamp=1608864896341&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffraction.js%2Fdownload%2Ffraction.js-4.0.13.tgz#3c1c315fa16b35c85fffa95725a36fa729c69dfe"
-  integrity sha1-PBwxX6FrNchf/6lXJaNvpynGnf4=
+"fraction.js@^4.0.13":
+  "integrity" "sha1-PBwxX6FrNchf/6lXJaNvpynGnf4= sha512-E1fz2Xs9ltlUp+qbiyx9wmt2n9dRzPsS11Jtdb8D2o+cC7wr9xkkKsVKJuBX0ST+LVS+LhLO+SbLJNtfWcJvXA=="
+  "resolved" "https://registry.npm.taobao.org/fraction.js/download/fraction.js-4.0.13.tgz?cache=0&sync_timestamp=1608864896341&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffraction.js%2Fdownload%2Ffraction.js-4.0.13.tgz"
+  "version" "4.0.13"
 
-javascript-natural-sort@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.npm.taobao.org/javascript-natural-sort/download/javascript-natural-sort-0.7.1.tgz#f9e2303d4507f6d74355a73664d1440fb5a0ef59"
-  integrity sha1-+eIwPUUH9tdDVac2ZNFED7Wg71k=
+"javascript-natural-sort@^0.7.1":
+  "integrity" "sha1-+eIwPUUH9tdDVac2ZNFED7Wg71k= sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw=="
+  "resolved" "https://registry.npm.taobao.org/javascript-natural-sort/download/javascript-natural-sort-0.7.1.tgz"
+  "version" "0.7.1"
 
-mathjs@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.npm.taobao.org/mathjs/download/mathjs-9.2.0.tgz#247f204c6d0151ee01d1a2696b90d30e25f82a7e"
-  integrity sha1-JH8gTG0BUe4B0aJpa5DTDiX4Kn4=
+"mathjs@^9.2.0":
+  "integrity" "sha1-JH8gTG0BUe4B0aJpa5DTDiX4Kn4= sha512-R2fQxaOmyifxgP4+c59dnfLwpKI1KYHdnT5lLwDuHIZvgyGb71M8ay6kTJTEv9rG04pduqvX4tbBUoG5ypTF8A=="
+  "resolved" "https://registry.npm.taobao.org/mathjs/download/mathjs-9.2.0.tgz"
+  "version" "9.2.0"
   dependencies:
-    complex.js "^2.0.11"
-    decimal.js "^10.2.1"
-    escape-latex "^1.2.0"
-    fraction.js "^4.0.13"
-    javascript-natural-sort "^0.7.1"
-    seedrandom "^3.0.5"
-    tiny-emitter "^2.1.0"
-    typed-function "^2.0.0"
+    "complex.js" "^2.0.11"
+    "decimal.js" "^10.2.1"
+    "escape-latex" "^1.2.0"
+    "fraction.js" "^4.0.13"
+    "javascript-natural-sort" "^0.7.1"
+    "seedrandom" "^3.0.5"
+    "tiny-emitter" "^2.1.0"
+    "typed-function" "^2.0.0"
 
-seedrandom@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.npm.taobao.org/seedrandom/download/seedrandom-3.0.5.tgz#54edc85c95222525b0c7a6f6b3543d8e0b3aa0a7"
-  integrity sha1-VO3IXJUiJSWwx6b2s1Q9jgs6oKc=
+"seedrandom@^3.0.5":
+  "integrity" "sha1-VO3IXJUiJSWwx6b2s1Q9jgs6oKc= sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg=="
+  "resolved" "https://registry.npm.taobao.org/seedrandom/download/seedrandom-3.0.5.tgz"
+  "version" "3.0.5"
 
-tiny-emitter@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/tiny-emitter/download/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
-  integrity sha1-HRpW7fxRxD6GPLtTgqcjMONVVCM=
+"tiny-emitter@^2.1.0":
+  "integrity" "sha1-HRpW7fxRxD6GPLtTgqcjMONVVCM="
+  "resolved" "https://registry.npm.taobao.org/tiny-emitter/download/tiny-emitter-2.1.0.tgz"
+  "version" "2.1.0"
 
-typed-function@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/typed-function/download/typed-function-2.0.0.tgz#15ab3825845138a8b1113bd89e60cd6a435739e8"
-  integrity sha1-Fas4JYRROKixETvYnmDNakNXOeg=
+"typed-function@^2.0.0":
+  "integrity" "sha1-Fas4JYRROKixETvYnmDNakNXOeg= sha512-Hhy1Iwo/e4AtLZNK10ewVVcP2UEs408DS35ubP825w/YgSBK1KVLwALvvIG4yX75QJrxjCpcWkzkVRB0BwwYlA=="
+  "resolved" "https://registry.npm.taobao.org/typed-function/download/typed-function-2.0.0.tgz"
+  "version" "2.0.0"
