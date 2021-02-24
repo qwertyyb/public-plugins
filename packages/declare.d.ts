@@ -1,3 +1,5 @@
+declare module 'electron'
+
 declare var service: {
   getPlugins: () => PublicPlugin[]
 }

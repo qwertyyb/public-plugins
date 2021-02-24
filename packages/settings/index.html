@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设置</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ==" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <style>
+    .setting-item.selected {
+      background: #3B82F6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="flex">
+    <div class="aside w-48">
+      <ul class="setting-list text-center border-r h-screen">
+        <li class="setting-item h-12 flex items-center justify-center selected">插件设置</li>
+        <li class="setting-item h-12 flex items-center justify-center">快捷键设置</li>
+      </ul>
+    </div>
+    <div class="main flex-1">
+      <ul class="plugin-list">
+        <li class="plugin-item flex p-4 py-2 items-center">
+          <img src="https://via.placeholder.com/150" alt="" class="w-10 h-10 rounded-full">
+          <div class="info flex flex-col ml-4 justify-center">
+            <h3 class="text-base">应用启动器</h3>
+            <h5 class="text-gray-400 text-xs mt-1">快速启动应用</h5>
+          </div>
+          <div class="suffix ml-auto flex items-center">
+            <div class="active-btn py-1 px-4 bg-green-500 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 cursor-pointer">
+              启用
+            </div>
+            <div class="more-btn ml-4">...</div>
+          </div>
+        </li>
+        <li class="plugin-item flex p-4 py-2 items-center">
+          <img src="https://via.placeholder.com/150" alt="" class="w-10 h-10 rounded-full">
+          <div class="info flex flex-col ml-4 justify-center">
+            <h3 class="text-base">应用启动器</h3>
+            <h5 class="text-gray-400 text-xs mt-1">快速启动应用</h5>
+          </div>
+          <div class="suffix ml-auto">...
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
