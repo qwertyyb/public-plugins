@@ -67,7 +67,7 @@ const COMMAND = 'calculator'
 
 class CalculatorPlugin implements PublicPlugin {
 
-  icon = 'https://via.placeholder.com/50?text=calculator'
+  icon = 'https://img.icons8.com/plasticine/100/000000/apple-calculator.png'
   title = '计算器'
   subtitle = '快捷计算表达式'
 
@@ -95,4 +95,4 @@ class CalculatorPlugin implements PublicPlugin {
   }
 }
 
-export default new CalculatorPlugin()
+export default () => new CalculatorPlugin()

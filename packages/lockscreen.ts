@@ -44,4 +44,4 @@ class LockScreenPlugin implements PublicPlugin {
   }
 }
 
-export default new LockScreenPlugin()
+export default () => new LockScreenPlugin()

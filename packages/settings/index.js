@@ -1,17 +1,28 @@
 const { ipcRenderer } = require('electron')
-
+// const { port1, port2 } = new MessageChannel()
+// ipcRenderer.postMessage('port', { hello: 'word' }, [port1])
 
 var app = new Vue({
   el: '#app',
   data: {
     plugins: []
   },
-  created () {
+  created() {
+    ipcRenderer.on('getPlugins:response', (e, plugins) => {
+      this.plugins = plugins
+    })
+  },
+  mounted () {
     this.getPlugins()
   },
   methods: {
-    getPlugins() {
-      console.log(ipcRenderer.invoke('settings:getPlugins'))
+    async getPlugins() {
+      console.log('ppp')
+      const remote = require('electron').remote
+      ipcRenderer.sendTo(
+        remote.getGlobal('publicApp').window.main.webContents.id,
+        'getPlugins'
+      )
     }
   }
 })

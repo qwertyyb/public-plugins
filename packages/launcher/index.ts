@@ -51,7 +51,7 @@ const buildQuery = () => (
 
 class LauncherPlugin implements PublicPlugin {
 
-  icon = 'https://via.placeholder.com/50?text=lock'
+  icon = 'https://img.icons8.com/fluent/48/000000/apps-tab.png'
   title = '应用启动器'
   subtitle = '快速启动应用'
 
@@ -113,4 +113,4 @@ class LauncherPlugin implements PublicPlugin {
   }
 }
 
-export default new LauncherPlugin()
+export default () => new LauncherPlugin()
