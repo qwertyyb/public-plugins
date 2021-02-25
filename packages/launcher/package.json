@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "file-icon": "^4.0.0",
-    "tiny-pinyin": "^1.3.2"
+    "file-icon": "^4.0.0"
   }
 }

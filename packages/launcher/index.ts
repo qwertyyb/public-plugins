@@ -2,20 +2,12 @@ import fs from 'fs'
 import * as path from 'path'
 // @ts-ignore
 import fileIcon from 'file-icon'
-import pinyin from 'tiny-pinyin'
 import mdfind from './mdfind'
 
 interface App {
   name: string,
   path: string,
   icon: string,
-}
-
-const pinyinMatch = (hanzi: string, keyword: string) => {
-  const pyword = pinyin.convertToPinyin(hanzi, '-', true)
-  // @ts-ignore
-  return pyword.replaceAll('-', '').includes(keyword) // 全拼音匹配
-    || pyword.split('-').map(a => a[0]).filter(b => b).join('').includes(keyword)
 }
 
 const getApplicationSupportPath = () => {
@@ -55,7 +47,10 @@ class LauncherPlugin implements PublicPlugin {
   title = '应用启动器'
   subtitle = '快速启动应用'
 
-  constructor() {
+  app: any
+
+  constructor(app: any) {
+    this.app = app
     // @ts-ignore
     window.requestIdleCallback(() => {
       this.getAppList()
@@ -106,6 +101,8 @@ class LauncherPlugin implements PublicPlugin {
   ) {
     if (!keyword) return setResult([])
     keyword = keyword.toLocaleLowerCase();
+    const pinyinMatch = this.app.getUtils().pinyinMatch
+    console.log(this.app)
     setResult(this.apps.filter(item => {
       return item.code?.toLocaleLowerCase().includes(keyword)
         || pinyinMatch(item.title, keyword)
@@ -113,4 +110,4 @@ class LauncherPlugin implements PublicPlugin {
   }
 }
 
-export default () => new LauncherPlugin()
+export default (app: any) => new LauncherPlugin(app)

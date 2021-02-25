@@ -7,6 +7,10 @@
   <title>设置</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ==" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <style>
     .setting-item.selected {
       background: #3B82F6;
@@ -80,30 +84,54 @@ input:checked + .slider:before {
   <div id="app" class="flex">
     <div class="aside w-48">
       <ul class="setting-list text-center border-r h-screen">
-        <li class="setting-item h-12 flex items-center justify-center selected">插件设置</li>
-        <li class="setting-item h-12 flex items-center justify-center">快捷键设置</li>
+        <li class="setting-item h-12 flex items-center justify-center"
+          v-for="(label, keyName) in views"
+          :key="keyName"
+          :class="{selected: curView === keyName}"
+          @click="curView=keyName">{{label}}</li>
       </ul>
     </div>
     <div class="main flex-1">
-      <div class="bg-gray-200 text-gray-600 px-2 py-2">系统插件</div>
-      <ul class="plugin-list">
-        <li class="plugin-item flex p-4 py-3 items-center"
-          v-for="plugin in plugins"
-          :key="plugin.key">
-          <img :src="plugin.icon" alt="" class="w-10 h-10">
-          <div class="info flex flex-col ml-4 justify-center">
-            <h3 class="text-base">{{plugin.title}}</h3>
-            <h5 class="text-gray-400 text-xs mt-1">{{plugin.subtitle}}</h5>
-          </div>
-          <div class="suffix ml-auto flex items-center">
-            <label class="switch">
-              <input type="checkbox" v-model="plugin.disabled">
-              <span class="slider round"></span>
-            </label>
-            <div class="more-btn ml-4">...</div>
-          </div>
-        </li>
-      </ul>
+      <div v-if="curView === 'common'">
+        <ul class="shortcut-list my-4">
+          <li class="shortcut-item flex items-center">
+            <div class="w-48 text-right mr-6">开机启动</div>
+            <el-switch v-model="settings.autoLaunch" @change="onAutoLaunchChange"></el-switch>
+          </li>
+        </ul>
+      </div>
+      <div v-else-if="curView==='plugins'">
+        <div class="bg-gray-200 text-gray-600 px-2 py-2">系统插件</div>
+        <ul class="plugin-list">
+          <li class="plugin-item flex p-4 py-3 items-center"
+            v-for="plugin in plugins"
+            :key="plugin.key">
+            <img :src="plugin.icon" alt="" class="w-10 h-10">
+            <div class="info flex flex-col ml-4 justify-center">
+              <h3 class="text-base">{{plugin.title}}</h3>
+              <h5 class="text-gray-400 text-xs mt-1">{{plugin.subtitle}}</h5>
+            </div>
+            <!-- <div class="suffix ml-auto flex items-center">
+              <label class="switch">
+                <input type="checkbox" v-model="plugin.disabled">
+                <span class="slider round"></span>
+              </label>
+              <div class="more-btn ml-4">...</div>
+            </div> -->
+          </li>
+        </ul>
+      </div>
+      <div v-else-if="curView==='shortcut'">
+        <ul class="shortcut-list my-4">
+          <li class="shortcut-item flex items-center">
+            <div class="w-48 text-right mr-4">显示/隐藏主界面</div>
+            <button class="px-4 h-8 border rounded outline-none focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-blue-400"
+              @click="onShortcutBtnClicked">
+              {{ settings.shortcut }}
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <script type="module" src="./index.js"></script>
